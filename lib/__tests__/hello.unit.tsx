@@ -1,10 +1,11 @@
-function add(a: number, b: number) {
-  return a + b;
-}
+import * as renderer from 'react-test-renderer'
+import * as React from 'react';
 
+import Button from '../button';
 
-describe('我的第一个测试用例', () => {
-  it('1 + 2 等于 3 ', () => {
-    expect(add(1, 2)).toEqual(3);
+describe('button', () => {
+  it('是个 div', () => {
+      const json = renderer.create(<Button/>).toJSON()
+      expect(json).toMatchSnapshot()
   })
-})
+});
