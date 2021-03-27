@@ -15,6 +15,10 @@ module.exports = {
         use: "awesome-typescript-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.svg?$/,
+        use: "svg-sprite-loader",
+      },
     ],
   },
   resolve: {
