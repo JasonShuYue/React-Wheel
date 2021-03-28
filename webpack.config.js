@@ -19,6 +19,10 @@ module.exports = {
         test: /\.svg?$/,
         use: "svg-sprite-loader",
       },
+      {
+        test: /\.s([ac]ss$)/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   resolve: {
